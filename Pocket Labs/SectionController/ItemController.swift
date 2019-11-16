@@ -31,12 +31,12 @@ extension ItemController {
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-         guard let context = collectionContext else { return .zero }
-               if index == 0 {
-                   return CGSize(width: context.containerSize.width - 48, height: 68)
-               } else {
-                   return CGSize(width: 152, height: 152)
-               }
+        guard let context = collectionContext else { return .zero }
+        if index == 0 {
+            return CGSize(width: context.containerSize.width - 48, height: 68)
+        } else {
+            return CGSize(width: context.containerSize.width - 48, height: 100)
+        }
        
     }
 
