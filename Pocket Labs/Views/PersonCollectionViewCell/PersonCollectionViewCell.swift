@@ -6,23 +6,28 @@
 //  Copyright © 2019 Ferdinand Lösch. All rights reserved.
 //
 
-import UIKit
 import Reusable
-
+import UIKit
+import UICircularProgressRing
 class PersonCollectionViewCell: UICollectionViewCell, NibReusable {
     @IBOutlet var Background: UIView!
     @IBOutlet var image: UIImageView!
-    @IBOutlet var label: UILabel!
     @IBOutlet var name: UILabel!
     @IBOutlet var age: UILabel!
     @IBOutlet var pos: UILabel!
+    @IBOutlet weak var p1: UICircularProgressRing!
+    @IBOutlet weak var p2: UICircularProgressRing!
+    @IBOutlet weak var p3: UICircularProgressRing!
+    var trip = (0,0,0)
     
-    public func configer(image: UIImage, label: String,name: String, age: String, pos: String) {
-        self.label.text = label
-        self.image.image = image
-        self.age.text = age
-        self.name.text = name
-        self.pos.text = pos
+    public func configer(model: PatientModel) {
+        self.image.image = model.image
+        self.age.text = model.age
+        self.name.text = model.name
+        self.pos.text = model.pos
+        trip.0 = model.p1
+        trip.1 = model.p2
+        trip.2 = model.p3
     }
 
     override func layoutSubviews() {
@@ -38,10 +43,14 @@ class PersonCollectionViewCell: UICollectionViewCell, NibReusable {
         layer.shadowOffset = CGSize(width: 0, height: 6)
         layer.shadowOpacity = 0.12
         layer.shadowRadius = 10
-        
+        self.image.layer.masksToBounds = false
+        self.image.layer.borderColor = UIColor.black.cgColor
+        self.image.layer.cornerRadius = image.frame.height/2
+        self.image.clipsToBounds = true
+        p1.startProgress(to: CGFloat(trip.0), duration: 2.0)
+        p2.startProgress(to: CGFloat(trip.1), duration: 2.0)
+        p3.startProgress(to: CGFloat(trip.2), duration: 2.0)
     }
-
-
 
     override func awakeFromNib() {
         super.awakeFromNib()

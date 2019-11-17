@@ -11,7 +11,6 @@ import Reusable
 import SceneKit
 import UIKit
 
-
 class ItemController: ListSectionController {
     var model: itemModelList!
 
@@ -21,9 +20,7 @@ class ItemController: ListSectionController {
         minimumLineSpacing = 22
         minimumInteritemSpacing = 22
     }
-
 }
-
 
 extension ItemController {
     override func numberOfItems() -> Int {
@@ -35,28 +32,25 @@ extension ItemController {
         if index == 0 {
             return CGSize(width: context.containerSize.width - 48, height: 68)
         } else {
-            return CGSize(width: context.containerSize.width - 48, height: 100)
+            return CGSize(width: context.containerSize.width - 48, height: 227)
         }
-       
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         if index != 0 {
             let callData = model.arry[index]
-            let cell = collectionContext!.dequeueReusableCell(withNibName: PersonCollectionViewCell.reuseIdentifier,    bundle: Bundle.main, for: self, at: index) as! PersonCollectionViewCell
-            cell.configer(image: callData.image, label: callData.percentage, name: callData.name, age: callData.age,pos: callData.pos)
-            
+            let cell = collectionContext!.dequeueReusableCell(withNibName: PersonCollectionViewCell.reuseIdentifier, bundle: Bundle.main, for: self, at: index) as! PersonCollectionViewCell
+            cell.configer(model: callData)
+
             return cell
         } else {
-             let cell2 = collectionContext!.dequeueReusableCell(withNibName: TitleCell.reuseIdentifier, bundle: Bundle.main, for: self, at: index) as! TitleCell
-                       cell2.configure(with: model.title)
+            let cell2 = collectionContext!.dequeueReusableCell(withNibName: TitleCell.reuseIdentifier, bundle: Bundle.main, for: self, at: index) as! TitleCell
+            cell2.configure(with: model.title)
             return cell2
         }
     }
 
-    override func didSelectItem(at index: Int) {
-       
-    }
+    override func didSelectItem(at _: Int) {}
 
     override func didUpdate(to object: Any) {
         model = object as? itemModelList

@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (4.9.0)
+  - BulletinBoard (4.1.0)
+  - GeometricLoaders (1.1.1)
+  - Haptica (3.0.1)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - MJPEGStreamLib (0.2.1)
+  - Peep (2.1.2)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
+  - UICircularProgressRing (6.3.0)
+  - WCLShineButton (1.0.8)
+
+DEPENDENCIES:
+  - Alamofire
+  - BulletinBoard
+  - GeometricLoaders
+  - Haptica
+  - IGListKit (~> 3.0)
+  - MJPEGStreamLib
+  - Peep
+  - Reusable
+  - UICircularProgressRing
+  - WCLShineButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BulletinBoard
+    - GeometricLoaders
+    - Haptica
+    - IGListKit
+    - MJPEGStreamLib
+    - Peep
+    - Reusable
+    - UICircularProgressRing
+    - WCLShineButton
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  BulletinBoard: c774340545b5cfd05a96a89f63b105ecc95c86f9
+  GeometricLoaders: 4fbbeb569cf0ea647c620a9ffb87c9e63812e743
+  Haptica: 122ff121c88ea534e51039577305d104458c08c5
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  MJPEGStreamLib: 516e82b6bcd93cac6d671a37052a15908502e6c5
+  Peep: adfea4fc564a121ec467bfa5f7edd2f9b3c4de27
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  UICircularProgressRing: e700fb0505328e88ee53c4ed92bee6d1a5b8bbe3
+  WCLShineButton: 315ee9b0024b1cc56dba34fb6a8878937eb8d0b1
+
+PODFILE CHECKSUM: 19e64162b665d4fdf46bba2acb9d1a8593d7762e
+
+COCOAPODS: 1.5.3

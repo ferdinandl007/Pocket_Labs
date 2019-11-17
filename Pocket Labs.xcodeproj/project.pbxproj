@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45CA7902ED9640C9331B9805 /* Pods_Pocket_LabsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CE78E091D31BC785EC3AD7 /* Pods_Pocket_LabsUITests.framework */; };
+		CF7451C623812B2E00B8D5B4 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7451C523812B2E00B8D5B4 /* StatisticView.swift */; };
+		CF7451C823812B6300B8D5B4 /* StatisticView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7451C723812B6300B8D5B4 /* StatisticView.xib */; };
 		CF94B09C238064600090C330 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B09B238064600090C330 /* PersonCollectionViewCell.swift */; };
 		CF94B09F238064A10090C330 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94B09E238064A10090C330 /* PersonCollectionViewCell.xib */; };
 		CF94B0A22380929A0090C330 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0A12380929A0090C330 /* ItemController.swift */; };
@@ -15,6 +17,14 @@
 		CF94B0A723809B8A0090C330 /* NSObject+ListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0A623809B8A0090C330 /* NSObject+ListDiffable.swift */; };
 		CF94B0AB2380A70A0090C330 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0A92380A7090090C330 /* TitleCell.swift */; };
 		CF94B0AC2380A70A0090C330 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94B0AA2380A7090090C330 /* TitleCell.xib */; };
+		CF94B0AF2380A9CD0090C330 /* HaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0AE2380A9CD0090C330 /* HaderCell.swift */; };
+		CF94B0B12380AA250090C330 /* HaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94B0B02380AA250090C330 /* HaderCell.xib */; };
+		CF94B0B32380B01E0090C330 /* HaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0B22380B01E0090C330 /* HaderSectionController.swift */; };
+		CF94B0B52380B0580090C330 /* haderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0B42380B0580090C330 /* haderModel.swift */; };
+		CF94B0BB2380B1F50090C330 /* CountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0B92380B1F50090C330 /* CountCell.swift */; };
+		CF94B0BC2380B1F50090C330 /* CountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94B0BA2380B1F50090C330 /* CountCell.xib */; };
+		CF94B0C02380C2D80090C330 /* Supporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0BE2380C2D80090C330 /* Supporters.swift */; };
+		CF94B0C12380C2D80090C330 /* VCBLTNPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94B0BF2380C2D80090C330 /* VCBLTNPageItem.swift */; };
 		CFE46F9A23805ED5001B8E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46F9923805ED5001B8E1C /* AppDelegate.swift */; };
 		CFE46F9C23805ED5001B8E1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46F9B23805ED5001B8E1C /* SceneDelegate.swift */; };
 		CFE46F9E23805ED5001B8E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46F9D23805ED5001B8E1C /* ViewController.swift */; };
@@ -53,6 +63,8 @@
 		B1CE78E091D31BC785EC3AD7 /* Pods_Pocket_LabsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_LabsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B655C8F6FCABED1B32B78F4D /* Pods_Pocket_Labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF734B886534496C22C769C /* Pods-Pocket LabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket LabsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket LabsTests/Pods-Pocket LabsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF7451C523812B2E00B8D5B4 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		CF7451C723812B6300B8D5B4 /* StatisticView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticView.xib; sourceTree = "<group>"; };
 		CF94B09B238064600090C330 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF94B09E238064A10090C330 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF94B0A12380929A0090C330 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,14 @@
 		CF94B0A623809B8A0090C330 /* NSObject+ListDiffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ListDiffable.swift"; sourceTree = "<group>"; };
 		CF94B0A92380A7090090C330 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		CF94B0AA2380A7090090C330 /* TitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		CF94B0AE2380A9CD0090C330 /* HaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaderCell.swift; sourceTree = "<group>"; };
+		CF94B0B02380AA250090C330 /* HaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HaderCell.xib; sourceTree = "<group>"; };
+		CF94B0B22380B01E0090C330 /* HaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaderSectionController.swift; sourceTree = "<group>"; };
+		CF94B0B42380B0580090C330 /* haderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = haderModel.swift; sourceTree = "<group>"; };
+		CF94B0B92380B1F50090C330 /* CountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountCell.swift; sourceTree = "<group>"; };
+		CF94B0BA2380B1F50090C330 /* CountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountCell.xib; sourceTree = "<group>"; };
+		CF94B0BE2380C2D80090C330 /* Supporters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supporters.swift; sourceTree = "<group>"; };
+		CF94B0BF2380C2D80090C330 /* VCBLTNPageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCBLTNPageItem.swift; sourceTree = "<group>"; };
 		CFE46F9623805ED5001B8E1C /* Pocket Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE46F9923805ED5001B8E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE46F9B23805ED5001B8E1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,9 +135,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF7451C423812AF500B8D5B4 /* stasView */ = {
+			isa = PBXGroup;
+			children = (
+				CF7451C523812B2E00B8D5B4 /* StatisticView.swift */,
+				CF7451C723812B6300B8D5B4 /* StatisticView.xib */,
+			);
+			path = stasView;
+			sourceTree = "<group>";
+		};
 		CF94B09A238064210090C330 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF7451C423812AF500B8D5B4 /* stasView */,
+				CF94B0BD2380C2D80090C330 /* BulletinViews */,
+				CF94B0B62380B1730090C330 /* PatientCount */,
+				CF94B0AD2380A9920090C330 /* haderCell */,
 				CF94B0A82380A7090090C330 /* Room header */,
 				CF94B09D2380648A0090C330 /* PersonCollectionViewCell */,
 			);
@@ -137,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				CF94B0A12380929A0090C330 /* ItemController.swift */,
+				CF94B0B22380B01E0090C330 /* HaderSectionController.swift */,
 			);
 			path = SectionController;
 			sourceTree = "<group>";
@@ -145,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				CF94B0A4238092F90090C330 /* PatientModel.swift */,
+				CF94B0B42380B0580090C330 /* haderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +191,33 @@
 				CF94B0AA2380A7090090C330 /* TitleCell.xib */,
 			);
 			path = "Room header";
+			sourceTree = "<group>";
+		};
+		CF94B0AD2380A9920090C330 /* haderCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF94B0AE2380A9CD0090C330 /* HaderCell.swift */,
+				CF94B0B02380AA250090C330 /* HaderCell.xib */,
+			);
+			path = haderCell;
+			sourceTree = "<group>";
+		};
+		CF94B0B62380B1730090C330 /* PatientCount */ = {
+			isa = PBXGroup;
+			children = (
+				CF94B0B92380B1F50090C330 /* CountCell.swift */,
+				CF94B0BA2380B1F50090C330 /* CountCell.xib */,
+			);
+			path = PatientCount;
+			sourceTree = "<group>";
+		};
+		CF94B0BD2380C2D80090C330 /* BulletinViews */ = {
+			isa = PBXGroup;
+			children = (
+				CF94B0BE2380C2D80090C330 /* Supporters.swift */,
+				CF94B0BF2380C2D80090C330 /* VCBLTNPageItem.swift */,
+			);
+			path = BulletinViews;
 			sourceTree = "<group>";
 		};
 		CFE46F8D23805ED5001B8E1C = {
@@ -338,9 +400,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF94B09F238064A10090C330 /* PersonCollectionViewCell.xib in Resources */,
+				CF94B0BC2380B1F50090C330 /* CountCell.xib in Resources */,
 				CFE46FA623805ED8001B8E1C /* LaunchScreen.storyboard in Resources */,
 				CFE46FA323805ED8001B8E1C /* Assets.xcassets in Resources */,
 				CFE46FA123805ED5001B8E1C /* Main.storyboard in Resources */,
+				CF7451C823812B6300B8D5B4 /* StatisticView.xib in Resources */,
+				CF94B0B12380AA250090C330 /* HaderCell.xib in Resources */,
 				CF94B0AC2380A70A0090C330 /* TitleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,15 +434,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pocket Labs/Pods-Pocket Labs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BLTNBoard.framework",
+				"${BUILT_PRODUCTS_DIR}/GeometricLoaders/GeometricLoaders.framework",
+				"${BUILT_PRODUCTS_DIR}/Haptica/Haptica.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MJPEGStreamLib/MJPEGStreamLib.framework",
+				"${BUILT_PRODUCTS_DIR}/Peep/Peep.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${BUILT_PRODUCTS_DIR}/WCLShineButton/WCLShineButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLTNBoard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GeometricLoaders.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haptica.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJPEGStreamLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Peep.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCLShineButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,14 +524,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF94B0C12380C2D80090C330 /* VCBLTNPageItem.swift in Sources */,
+				CF7451C623812B2E00B8D5B4 /* StatisticView.swift in Sources */,
 				CF94B0A22380929A0090C330 /* ItemController.swift in Sources */,
 				CF94B0A723809B8A0090C330 /* NSObject+ListDiffable.swift in Sources */,
 				CF94B0A5238092F90090C330 /* PatientModel.swift in Sources */,
+				CF94B0BB2380B1F50090C330 /* CountCell.swift in Sources */,
+				CF94B0B32380B01E0090C330 /* HaderSectionController.swift in Sources */,
+				CF94B0B52380B0580090C330 /* haderModel.swift in Sources */,
 				CFE46F9E23805ED5001B8E1C /* ViewController.swift in Sources */,
+				CF94B0C02380C2D80090C330 /* Supporters.swift in Sources */,
 				CF94B0AB2380A70A0090C330 /* TitleCell.swift in Sources */,
 				CFE46F9A23805ED5001B8E1C /* AppDelegate.swift in Sources */,
 				CFE46F9C23805ED5001B8E1C /* SceneDelegate.swift in Sources */,
 				CF94B09C238064600090C330 /* PersonCollectionViewCell.swift in Sources */,
+				CF94B0AF2380A9CD0090C330 /* HaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,10 +715,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket Labs/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-Labs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -648,10 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket Labs/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-Labs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -669,11 +749,7 @@
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -692,11 +768,7 @@
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -713,11 +785,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -734,11 +802,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

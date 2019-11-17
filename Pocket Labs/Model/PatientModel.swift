@@ -8,7 +8,7 @@
 
 import Foundation
 
-import  UIKit
+import UIKit
 
 class PatientModel: NSObject {
     let name: String!
@@ -16,12 +16,18 @@ class PatientModel: NSObject {
     var pos: String!
     let image: UIImage!
     let percentage: String!
-    init(name: String, age: String, pos: String,image: UIImage,percentage: String) {
+    let p1: Int!
+    let p2: Int!
+    let p3: Int!
+    init(name: String, age: String, pos: String, image: UIImage, percentage: String,p1: Int,p2: Int,p3: Int) {
         self.name = name
         self.age = age
         self.pos = pos
         self.image = image
         self.percentage = percentage
+        self.p1 = p1
+        self.p2 = p2
+        self.p3 = p3
     }
 }
 
@@ -33,5 +39,3 @@ class itemModelList: NSObject {
         title = titel
     }
 }
-
-

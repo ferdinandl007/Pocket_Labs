@@ -12,7 +12,6 @@ protocol ButtonDelegate: class {
 }
 
 class TitleCell: UICollectionViewCell, NibReusable {
-
     @IBOutlet var roomLabel: UILabel!
     weak var delegate: ButtonDelegate?
     override func awakeFromNib() {
