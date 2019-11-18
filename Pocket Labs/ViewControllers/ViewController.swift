@@ -40,8 +40,8 @@ class ViewController: UIViewController {
         let rootItem: BLTNItem = getNname()
         bulletinManager = BLTNItemManager(rootItem: rootItem)
 
-        let hader = HaderModel(completed: defaults.integer(forKey: "copm") ?? 0,
-                               scheduled: defaults.integer(forKey: "donn") ?? 0)
+        let hader = HaderModel(completed: defaults.integer(forKey: "copm") ,
+                               scheduled: defaults.integer(forKey: "donn") )
         modelPrenson.append(hader)
 
         modelPrenson.append(makeSomeData())

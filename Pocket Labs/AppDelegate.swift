@@ -8,6 +8,8 @@
 
 import UIKit
 
+let ip_addr = "192.168.43.92"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

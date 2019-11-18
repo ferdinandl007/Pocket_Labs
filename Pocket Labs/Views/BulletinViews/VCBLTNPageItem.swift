@@ -12,7 +12,6 @@ import Foundation
 import IGListKit
 import MJPEGStreamLib
 import UIKit
-let ip_addr = "192.168.43.92"
 extension ViewController {
     func getNname() -> TextFieldBulletinPage {
         let page = TextFieldBulletinPage(title: "Enter Your Name")
