@@ -10,8 +10,8 @@ import Foundation
 
 import BLTNBoard
 import Haptica
-import UICircularProgressRing
 import MJPEGStreamLib
+import UICircularProgressRing
 class TextFieldBulletinPage: FeedbackPageBLTNItem {
     @objc public var textField: UITextField!
 
@@ -33,13 +33,12 @@ class TextFieldBulletinPage: FeedbackPageBLTNItem {
     }
 }
 
-
 class VideoBulletinPage: FeedbackPageBLTNItem {
     @objc public var Video: UIImageView!
 
     @objc public var VideoHandler: ((BLTNActionItem, String?) -> Void)?
 
-    override func makeViewsUnderDescription(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
+    override func makeViewsUnderDescription(with _: BLTNInterfaceBuilder) -> [UIView]? {
         return [Video]
     }
 
@@ -51,7 +50,7 @@ class VideoBulletinPage: FeedbackPageBLTNItem {
 class StatisticsBulletinPage: FeedbackPageBLTNItem {
     @objc public var statisview: StatisticView!
 
-    override func makeViewsUnderDescription(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
+    override func makeViewsUnderDescription(with _: BLTNInterfaceBuilder) -> [UIView]? {
         return [statisview]
     }
 
@@ -59,8 +58,6 @@ class StatisticsBulletinPage: FeedbackPageBLTNItem {
         super.tearDown()
     }
 }
-
-
 
 // MARK: - UITextFieldDelegate
 

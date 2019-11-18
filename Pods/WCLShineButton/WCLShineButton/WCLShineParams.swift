@@ -27,36 +27,36 @@ import UIKit
 
 public struct WCLShineParams {
     /// shine是否随机颜色
-    public var allowRandomColor: Bool       = false
+    public var allowRandomColor: Bool = false
     /// shine动画时间，秒
-    public var animDuration: Double         = 1
+    public var animDuration: Double = 1
     /// 大Shine的颜色
-    public var bigShineColor: UIColor       = UIColor(rgb: (255, 102, 102))
+    public var bigShineColor: UIColor = UIColor(rgb: (255, 102, 102))
     /// 是否需要Flash效果
-    public var enableFlashing: Bool         = false
+    public var enableFlashing: Bool = false
     /// shine的个数
-    public var shineCount: Int              = 7
+    public var shineCount: Int = 7
     /// shine的扩散的旋转角度
-    public var shineTurnAngle: Float        = 20
+    public var shineTurnAngle: Float = 20
     /// shine的扩散的范围的倍数
     public var shineDistanceMultiple: Float = 1.5
     /// 小shine与大shine之前的角度差异
     public var smallShineOffsetAngle: Float = 20
     /// 小shine的颜色
-    public var smallShineColor: UIColor     = UIColor.lightGray
+    public var smallShineColor: UIColor = UIColor.lightGray
     /// shine的大小
     public var shineSize: CGFloat = 0
     /// 随机的颜色列表
-    public var colorRandom: [UIColor]       = [UIColor(rgb: (255, 255, 153)),
-                                               UIColor(rgb: (255, 204, 204)),
-                                               UIColor(rgb: (153, 102, 153)),
-                                               UIColor(rgb: (255, 102, 102)),
-                                               UIColor(rgb: (255, 255, 102)),
-                                               UIColor(rgb: (244, 67, 54)),
-                                               UIColor(rgb: (102, 102, 102)),
-                                               UIColor(rgb: (204, 204, 0)),
-                                               UIColor(rgb: (102, 102, 102)),
-                                               UIColor(rgb: (153, 153, 51))]
+    public var colorRandom: [UIColor] = [UIColor(rgb: (255, 255, 153)),
+                                         UIColor(rgb: (255, 204, 204)),
+                                         UIColor(rgb: (153, 102, 153)),
+                                         UIColor(rgb: (255, 102, 102)),
+                                         UIColor(rgb: (255, 255, 102)),
+                                         UIColor(rgb: (244, 67, 54)),
+                                         UIColor(rgb: (102, 102, 102)),
+                                         UIColor(rgb: (204, 204, 0)),
+                                         UIColor(rgb: (102, 102, 102)),
+                                         UIColor(rgb: (153, 153, 51))]
     public init() {}
 }
 
@@ -69,14 +69,13 @@ public struct WCLShineParams {
 /// - custom: 自定义图片
 /// - defaultAndSelect: 自定义默认和选中的图片
 public enum WCLShineImage {
-    
     case heart
     case like
     case smile
     case star
     case custom(UIImage)
     case defaultAndSelect(UIImage, UIImage)
-    
+
     func getImages() -> [UIImage] {
         switch self {
         case .heart:
@@ -87,17 +86,17 @@ public enum WCLShineImage {
             return [WCLShineBundle.imageFromBundle("smile")]
         case .star:
             return [WCLShineBundle.imageFromBundle("star")]
-        case .custom(let image):
+        case let .custom(image):
             return [image]
-        case .defaultAndSelect(let defaultImage, let selectImage):
+        case let .defaultAndSelect(defaultImage, selectImage):
             return [defaultImage, selectImage]
         }
     }
-    
+
     func isDefaultAndSelect() -> Bool {
-        return self.getValue() == 5
+        return getValue() == 5
     }
-    
+
     func getValue() -> Int {
         switch self {
         case .heart:
@@ -108,9 +107,9 @@ public enum WCLShineImage {
             return 2
         case .star:
             return 3
-        case .custom(_):
+        case .custom:
             return 4
-        case .defaultAndSelect(_, _):
+        case .defaultAndSelect:
             return 5
         }
     }
@@ -119,7 +118,7 @@ public enum WCLShineImage {
 var isIOS10: Bool {
     if #available(iOS 10.0, *) {
         return true
-    }else {
+    } else {
         return false
     }
 }

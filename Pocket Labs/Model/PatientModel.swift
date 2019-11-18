@@ -19,7 +19,7 @@ class PatientModel: NSObject {
     let p1: Int!
     let p2: Int!
     let p3: Int!
-    init(name: String, age: String, pos: String, image: UIImage, percentage: String,p1: Int,p2: Int,p3: Int) {
+    init(name: String, age: String, pos: String, image: UIImage, percentage: String, p1: Int, p2: Int, p3: Int) {
         self.name = name
         self.age = age
         self.pos = pos

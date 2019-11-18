@@ -6,12 +6,12 @@
 //  Copyright © 2019 Ferdinand Lösch. All rights reserved.
 //
 
+import Alamofire
 import BLTNBoard
 import Foundation
-import UIKit
-import MJPEGStreamLib
-import Alamofire
 import IGListKit
+import MJPEGStreamLib
+import UIKit
 let ip_addr = "192.168.43.92"
 extension ViewController {
     func getNname() -> TextFieldBulletinPage {
@@ -19,7 +19,6 @@ extension ViewController {
         page.isDismissable = false
         page.descriptionText = "this name will be used to identify you later on"
         page.actionButtonTitle = "Next"
-
 
         page.textInputHandler = { item, text in
             self.name = text ?? ""
@@ -35,7 +34,6 @@ extension ViewController {
         page.isDismissable = false
         page.descriptionText = "The edges used to identify you better"
         page.actionButtonTitle = "Next"
-    
 
         page.textInputHandler = { item, text in
             self.age = text ?? ""
@@ -65,23 +63,67 @@ extension ViewController {
             vc.allowsEditing = true
             vc.delegate = self
             self.topMostController().present(vc, animated: true)
-            
+
             item.manager?.displayNextItem()
         }
 
         page.next = getBloodSample()
         return page
     }
-    func topMostController() -> UIViewController {
-           var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
-           while topController.presentedViewController != nil {
-               topController = topController.presentedViewController!
-           }
-           return topController
-       }
-    
-    
-    
+
+    func getBloodSample() -> VideoBulletinPage {
+        let page = VideoBulletinPage(title: "Gets your blood sample")
+
+        page.appearance.actionButtonTitleColor = .white
+        page.descriptionText = "identify a spot with visible cells and press continue"
+        page.actionButtonTitle = "continue"
+        page.Video = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        page.Video.layer.masksToBounds = false
+        page.Video.layer.borderColor = UIColor.white.cgColor
+        page.Video.layer.cornerRadius = 10
+        page.Video.clipsToBounds = true
+
+        let stream = MJPEGStreamLib(imageView: page.Video!)
+        // Start Loading Indicator
+        // Your stream url should be here !
+        let url = URL(string: "http://\(ip_addr):9999/?action=stream")
+        stream.contentURL = url
+        stream.play()
+
+        page.actionHandler = { item in
+            item.manager?.displayActivityIndicator()
+
+            Alamofire.request("http://\(ip_addr):9998/detect").responseJSON {
+                response in
+                if let status = response.response?.statusCode {
+                    switch status {
+                    case 200:
+                        print("example success")
+                    default:
+                        print("error with response status: \(status)")
+                        item.manager?.popItem()
+                    }
+                }
+                if let result = response.result.value {
+                    let JSON = result as! NSDictionary
+                    print(JSON)
+                    let modell = PatientModel(name: self.name, age: self.age, pos: "\(Bool(JSON["health_level"] as? Float ?? 0.0 < 0.1))", image: self.image ?? #imageLiteral(resourceName: "Me"), percentage: "102", p1: JSON["percentage_infected"] as? Int ?? 0, p2: JSON["highest_prob"] as? Int ?? 0, p3: JSON["health_level"] as? Int ?? 0)
+                    NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: ["data": modell])
+
+                    let m = itemModelList(arr: [], titel: "cool")
+                    m.arry.append(modell)
+                    print(self.modelPrenson)
+                    self.modelPrenson.append(m)
+                    self.adapter.performUpdates(animated: true)
+                    item.manager?.displayNextItem()
+                }
+            }
+        }
+
+        page.next = makeCompletionPage()
+        return page
+    }
+
     func ShowStatistics() -> StatisticsBulletinPage {
         let page = StatisticsBulletinPage(title: "Statistics")
 
@@ -90,10 +132,10 @@ extension ViewController {
 
         page.descriptionText = "The analysis is complete"
         page.actionButtonTitle = "Next!"
-        
+
         page.statisview = StatisticView.loadFromNib()
         page.statisview.sizeToFit()
-        //page.statisview.configer(model: (model[1] as! itemModelList).arry.first!)
+        // page.statisview.configer(model: (model[1] as! itemModelList).arry.first!)
 
         page.isDismissable = true
 
@@ -105,18 +147,11 @@ extension ViewController {
         page.actionHandler = { item in
             item.manager?.displayNextItem()
         }
-        
-        
-    
-    
+
         page.next = makeCompletionPage()
 
         return page
     }
-
-    
-    
-
 
     func makeCompletionPage() -> BLTNPageItem {
         let page = BLTNPageItem(title: "Check completed")
@@ -148,9 +183,14 @@ extension ViewController {
 
         return page
     }
-    
 
-
+    func topMostController() -> UIViewController {
+        var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
+        while topController.presentedViewController != nil {
+            topController = topController.presentedViewController!
+        }
+        return topController
+    }
 }
 
 extension UIImage {

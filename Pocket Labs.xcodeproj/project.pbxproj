@@ -144,6 +144,14 @@
 			path = stasView;
 			sourceTree = "<group>";
 		};
+		CF7451CA2382D8D700B8D5B4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFE46F9D23805ED5001B8E1C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CF94B09A238064210090C330 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,9 +255,9 @@
 			children = (
 				CF94B0A3238092D80090C330 /* Model */,
 				CF94B0A02380928C0090C330 /* SectionController */,
+				CF7451CA2382D8D700B8D5B4 /* ViewControllers */,
 				CF94B09A238064210090C330 /* Views */,
 				CFE46F9B23805ED5001B8E1C /* SceneDelegate.swift */,
-				CFE46F9D23805ED5001B8E1C /* ViewController.swift */,
 				CFE46F9923805ED5001B8E1C /* AppDelegate.swift */,
 				CF94B0A623809B8A0090C330 /* NSObject+ListDiffable.swift */,
 				CFE46F9F23805ED5001B8E1C /* Main.storyboard */,
@@ -715,7 +723,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket Labs/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-Labs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -731,7 +742,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket Labs/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-Labs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -749,7 +763,11 @@
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -768,7 +786,11 @@
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -785,7 +807,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -802,7 +828,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJH7752BKA;
 				INFOPLIST_FILE = "Pocket LabsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ferdinand.Pocket-LabsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

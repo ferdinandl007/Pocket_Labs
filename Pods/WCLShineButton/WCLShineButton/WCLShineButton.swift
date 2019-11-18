@@ -27,22 +27,21 @@ import UIKit
 
 @IBDesignable
 public class WCLShineButton: UIControl {
-    
     /// 更多的配置参数
     public var params: WCLShineParams {
         didSet {
-            clickLayer.animDuration = params.animDuration/3
-            shineLayer.params       = params
+            clickLayer.animDuration = params.animDuration / 3
+            shineLayer.params = params
         }
     }
-    
+
     /// 未点击的颜色
     @IBInspectable public var color: UIColor = UIColor.lightGray {
         willSet {
             clickLayer.color = newValue
         }
     }
-    
+
     /// 点击后的颜色
     @IBInspectable public var fillColor: UIColor = UIColor(rgb: (255, 102, 102)) {
         willSet {
@@ -50,45 +49,46 @@ public class WCLShineButton: UIControl {
             shineLayer.fillColor = newValue
         }
     }
-    
+
     /// button的图片
     public var image: WCLShineImage = .heart {
         willSet {
             clickLayer.image = newValue
         }
     }
-    
+
     /// 是否点击的状态
     public override var isSelected: Bool {
         didSet {
             clickLayer.clicked = isSelected
         }
     }
-    
+
     private var clickLayer = WCLShineClickLayer()
-    
+
     private var shineLayer = WCLShineLayer()
-    
-    //MARK: Initial Methods
+
+    // MARK: Initial Methods
+
     public init(frame: CGRect, params: WCLShineParams) {
         self.params = params
         super.init(frame: frame)
         initLayers()
     }
-    
+
     public override init(frame: CGRect) {
         params = WCLShineParams()
         super.init(frame: frame)
         initLayers()
     }
-    
-    required public init?(coder aDecoder: NSCoder) {
+
+    public required init?(coder aDecoder: NSCoder) {
         params = WCLShineParams()
         super.init(coder: aDecoder)
         layoutIfNeeded()
         initLayers()
     }
-    
+
     public func setClicked(_ clicked: Bool, animated: Bool = true) {
         guard clicked != clickLayer.clicked else {
             return
@@ -111,9 +111,10 @@ public class WCLShineButton: UIControl {
             isSelected = clicked
         }
     }
-    
-    //MARK: Override
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+    // MARK: Override
+
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         if clickLayer.clicked == false {
             shineLayer.endAnim = { [weak self] in
@@ -123,17 +124,18 @@ public class WCLShineButton: UIControl {
                 self?.sendActions(for: .valueChanged)
             }
             shineLayer.startAnim()
-        }else {
+        } else {
             clickLayer.clicked = !clickLayer.clicked
             isSelected = clickLayer.clicked
             sendActions(for: .valueChanged)
         }
     }
-    
-    //MARK: Privater Methods
+
+    // MARK: Privater Methods
+
     private func initLayers() {
-        clickLayer.animDuration = params.animDuration/3
-        shineLayer.params       = params
+        clickLayer.animDuration = params.animDuration / 3
+        shineLayer.params = params
         clickLayer.frame = bounds
         shineLayer.frame = bounds
         layer.addSublayer(clickLayer)
