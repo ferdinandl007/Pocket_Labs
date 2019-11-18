@@ -1,4 +1,5 @@
 # Pocket_Labs
+https://devpost.com/software/pocket-labs
 ## Inspiration
 
 Malaria kills around 800,000 people a year and is second only to tuberculosis in its impact on world health.  In particular, the WHO African region is badly affected, suffering from over 90+ % of total malaria cases and deaths in 2017. Taking into account of the fact that 85% of malarial deaths are in children under 5 years of age, this is the equivalent of a child dying of malaria in Africa every 30 seconds.
